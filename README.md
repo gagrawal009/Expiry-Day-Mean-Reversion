@@ -6,8 +6,8 @@ On expiry days, the NIFTY 50 index often experiences sharp opening moves due to 
 Logic:
 
 If price at 9:30 AM is:
-- More than +0.5% above previous close : short
-- More than -0.5% below previous close : long
+- More than +0.3% above previous close : short
+- More than -0.3% below previous close : long
 - Otherwise : no trade
 
 Exit is at 3:15 PM
