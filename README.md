@@ -41,7 +41,7 @@ Open and run the following Jupyter notebooks in order:
 3. `backtest_results.ipynb`
 
 ### 3. Launch the Live Signal App
-
+Interactive Streamlit App: Visualize strategy signals, P&L, and tweak threshold to explore how the mean-reversion logic performs across different expiry days.
 ```bash
 streamlit run streamlit_app.py
 ```
