@@ -29,7 +29,9 @@ On expiry days, the NIFTY 50 index often experiences sharp opening moves due to 
 
 ### 1. Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
 ### 2. Run the Backtest & Analysis
 
@@ -40,4 +42,6 @@ Open and run the following Jupyter notebooks in order:
 
 ### 3. Launch the Live Signal App
 
+```bash
 streamlit run streamlit_app.py
+```
