@@ -48,3 +48,13 @@ def generate_expiry_day_trades(df, entry_threshold=0.005, exit_time_str='15:15:0
         })
 
     return pd.DataFrame(trades)
+
+def get_trade_signal(prev_close, entry_price, threshold=0.005):
+
+    move = (entry_price - prev_close) / prev_close
+    if move >= threshold:
+        return 'short'
+    elif move <= -threshold:
+        return 'long'
+    else:
+        return 'no trade'
