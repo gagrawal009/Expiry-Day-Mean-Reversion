@@ -11,11 +11,11 @@ def generate_expiry_day_trades(df, entry_threshold=0.005, exit_time_str='15:15:0
     for expiry_day in expiry_days:
         day_df = df[df['date'] == expiry_day].sort_values('Datetime')
         prev_day = expiry_day - pd.Timedelta(days=1)
-        prev_day_df = df[df['date'] == prev_day]
 
-        if prev_day_df.empty or day_df.empty:
-            continue
-
+        prev_day_df = df[df['date'] < expiry_day]
+        if prev_day_df.empty:
+            continue  
+                
         prev_close = prev_day_df.sort_values('Datetime').iloc[-1]['Close']
 
         entry_row = day_df[day_df['time'].astype(str) == "09:30:00"]
