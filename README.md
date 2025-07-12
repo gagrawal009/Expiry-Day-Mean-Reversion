@@ -1,4 +1,5 @@
 #Strategy Idea: Expiry-Day Mean Reversion
+
 ##Rationale:
 On expiry days, the NIFTY 50 index often experiences sharp opening moves due to option unwinding and volatility risk premiums. These moves tend to mean-revert during the day.
 
