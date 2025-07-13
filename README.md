@@ -5,12 +5,15 @@
 On expiry days, the NIFTY 50 index often experiences sharp opening moves due to option unwinding and volatility risk premiums. These moves tend to **mean-revert** during the day.
 
 ### Strategy Logic
+- If the 9:30 AM price moves more than the entry threshold (ex: 0.3%) above the previous close → Take a short position
+- If the 9:30 AM price moves more than the entry threshold (ex: 0.3%) below the previous close → Take a long position
+- Otherwise → No trade
 
-- If the 9:30 AM price is:
-  - More than **+0.3% above** the previous close → Take a **short** position
-  - More than **-0.3% below** the previous close → Take a **long** position
-  - Otherwise → **No trade**
-- Exit all trades at **3:15 PM**
+### Trade Exit
+Exit trades when either:
+- The target return is reached (ex: 0.4%) during the day 
+- The stop loss level is hit (ex: 0.3%) during the day 
+- Otherwise, exit at 3:15 PM
 
 ## Project Files
 
