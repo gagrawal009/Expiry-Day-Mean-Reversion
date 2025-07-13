@@ -27,7 +27,7 @@ if not (selected_date.weekday() == 3):
 
 prev_close = st.number_input("Previous Day Close", value=275.00, step=0.1)
 entry_price = st.number_input("Today’s 9:30 AM Price", value=276.5, step=0.1)
-threshold = st.slider("Entry Threshold (%)", 0.1, 1.0, value=0.5, step=0.1) / 100
+threshold = st.slider("Entry Threshold (%)", 0.1, 1.0, value=0.3, step=0.1) / 100
 target_return = st.slider("Target Return (%)", 0.1, 1.0, value=0.4, step=0.1) / 100
 stop_loss = st.slider("Stop Loss (%)", 0.1, 1.0, value=0.3, step=0.1) / 100
 
